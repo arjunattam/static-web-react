@@ -19,6 +19,7 @@ jobs:
         with:
           submodules: true
       - run: npm install
+      - run: npx playwright install
       - run: npm start & npx wait-on http://localhost:3000
       - run: npx playwright test
       - name: Build And Deploy
